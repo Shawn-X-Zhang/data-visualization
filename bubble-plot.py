@@ -5,7 +5,8 @@ import numpy as np
 
 
 # user set parameters here
-input_file_name = "BP identified phosphoproteins.xlsx"
+os.chdir('input')
+input_file_name = "bubble_data.xlsx"
 #input_file_name = "BP JW 16 proteins.xlsx"
 #input_file_name = "MF JW 16 proteins.xlsx"
 
@@ -82,6 +83,7 @@ plt.xlim([0, upper_limit])
 plt.ylim(-1,df.shape[0])
 
 #plt.set_linewidth(6)
+
 output_file_name = "output_" + input_file_name.split(".")[0]
 plt.savefig(output_file_name + ".jpg", dpi=600)
 plt.savefig(output_file_name + ".tiff",bbox_inches='tight',dpi=300)
